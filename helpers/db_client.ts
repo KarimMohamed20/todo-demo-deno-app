@@ -5,7 +5,7 @@ let db: Database;
 export function connect(){
 
     const client = new MongoClient();
-    client.connectWithUri("mongodb://localhost:27017/");
+    client.connectWithUri("mongodb://test:test@localhost/test?authSource=admin");
     console.log('Database connected');
     db = client.database("todo-app");  
 }
